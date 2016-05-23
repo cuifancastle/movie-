@@ -1,0 +1,41 @@
+extends ../layout
+//movie {title,flash,doctor导演，country国家,language,year,summary简介}
+block content
+    .container
+        .row
+            .col-md-7
+                //embed(src="#{movie.flash}",allowFullScreen="true",quality="high",width="720"
+                //,height="600",align="middle",type="application/x-shockware-flash")
+                    ////,src="http://imgcache.qq.com/tencentvideo_v1/player/TencentPlayer.swf?max_age=86400&amp;v=20141126"
+                embed(  wmode="opaque"
+                        ,flashvars="vid=j0019n4upc9&amp;duration=2347&amp;cid=fdug0j3etx4ioja&amp;tpid=2&amp;showend=1&amp;showcfg=1&amp;searchbar=1&amp;loadingswf=http://imgcache.qq.com/minivideo_v1/vd/res/skins/viploading.swf&amp;shownext=1&amp;list=2&amp;autoplay=1&amp;pay=1&amp;ptag=v_qq_com&amp;outhost=http%3A%2F%2Ffilm.qq.com%2Fcover%2Ff%2Ffdug0j3etx4ioja.html&amp;popup=0&amp;refer=http%3A%2F%2Fv.qq.com%2F&amp;bullet=1&amp;bulletid=&amp;title=01"
+                        ,src="#{movie.flash}"
+                        ,quality="high"
+                        ,name="tenvideo_flash_player_1462334643633"
+                        ,id="tenvideo_flash_player_1462334643633"
+                        ,bgcolor="#000000"
+                        ,allowscriptaccess="always"
+                        ,allowfullscreen="true"
+                        ,type="application/x-shockwave-flash"
+                        ,pluginspage="http://get.adobe.com/cn/flashplayer/"
+                        ,width="720"
+                        ,align="middle"
+                        ,height="600")
+            .col-md-5
+                dl.dl-horizontal
+                    dt 电影名字
+                    dd= movie.title
+                    dt 导演
+                    dd= movie.doctor
+                    dt 国家
+                    dd= movie.country
+                    dt 语言
+                    dd= movie.language
+                    dt 上映年份
+                    dd= movie.year
+                    dt 简介
+                    dd= movie.summary
+                    dt 栏目
+                    dd=movie.lanmu
+                    dt 标签
+                    dd=movie.biaoqian

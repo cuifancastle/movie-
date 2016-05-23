@@ -1,0 +1,17 @@
+１。巨坑大小写
+var MovieSchema = new mongoose.Schema()
+Schema　第一个字母大写
+var Movie = mongoose.model('Movie',MovieSchema);
+model　m小写
+2.
+app.locals.moment = require('moment');//格式化时间
+locals加s...
+3.
+MovieSchema.statics=
+statics s小写。。。
+4.
+find()   出来的是数组。。。
+findOne()  出来的是对象。。考了。render(‘’，｛movie:movie｝)谁知道movie是数组然后就重新请求啊
+5.
+bootstrap.css
+.hide 重名了　　而且　bootstrap自带!important  后面处理不了　给删了

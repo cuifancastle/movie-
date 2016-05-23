@@ -1,0 +1,376 @@
+extends ../layout
+//movies.item  {_id,poster海报,title标题}
+block content
+    link(href="/css/g_42.css" ,rel="stylesheet")
+
+
+    div(id="tvs",style="height:400px")
+        .mod.modSwitch.mod-new
+            //标题，电视剧　导航，"最新“”日韩鞠“”英美鞠“”感该剧“”大陆鞠“
+            .h
+                h2
+                    img.mod-icon.mod-fix(title="电视剧",src="http://r1.ykimg.com/051000005706326467BC3D382308E5E8")
+                    a(target="_blank",href="") 电视剧
+                ul.t_tab
+                    li.current
+                        a(href="#",rel="1",hidefocus="true") 最新
+                        .hide.yk-AD-sponsor
+                        //不清楚这里是干什么的 不会是广告吧。。。
+                    li
+                        a(href="#",rel="3",hidefocus="true") 日韩剧
+                    li
+                        a(href="#",rel="3",hidefocus="true") 美英剧
+                    li
+                        a(href="#",rel="3",hidefocus="true") 港台剧
+                    li
+                        a(href="#",rel="3",hidefocus="true") 大陆剧
+
+            //电视剧
+            .c(style="clear:both")
+                each item,i in tvs
+                 if item.length>=9
+                    .tab-c.hide(style="display:none")
+                        div
+                            .yk-row(modshow="1")
+                                .yk-col8
+                                    .yk-pack.p-list.p-large(_showid="300647")
+                                        .p-thumb
+                                            a(href="/movie/#{item[0]._id}",title="#{item[0].title}",target="video")
+                                            i.bg
+                                            img.quic(src="#{item[0].poster}")
+                                        ul.p-info.pos-bottom
+                                            li.status.hover-hide
+                                                span.p-time.hover-hide
+                                                    i.ibg
+                                                        span 更新至28级
+                                        ul.info-list
+                                            li.title.short-title
+                                                a(href="/movie/#{item[0]._id}",title="#{item[0].title}",target="video") #{item[0].title}
+                                            li
+                                                span #{item[0].summary}
+                                .yk-col4
+                                    .yk-pack.p-list.mb16
+                                        .p-thumb
+                                            a(href="/movie/#{item[1]._id}",title="#{item[1].title}",target="video")
+                                            i.bg
+                                            .p-thumb-taglt
+                                                span.ico-issole
+                                            img.quic(src="#{item[1].poster}")
+                                        ul.p-info.pos-bottom
+                                            li.status.hover-hide
+                                                span.p-time.hover-hide
+                                                    i.ibg
+                                                        span 更新至4集
+                                        ul.info-list
+                                            li.title.short-title
+                                                a(href="/movie/#{item[1]._id}") #{item[1].title}
+                                            li: span #{item[1].summary}
+                                    .yk-pack.p-list
+                                        .p-thumb
+                                            a(href="/movie/#{item[2]._id}",title="#{item[2].title}",target="video")
+                                            i.bg
+                                            .p-thumb-taglt
+                                                span.ico-issole
+                                            img.quic(src="#{item[2].poster}")
+                                        ul.p-info.pos-bottom
+                                            li.status.hover-hide
+                                                span.p-time.hover-hide
+                                                    i.ibg
+                                                        span 更新至4集
+                                        ul.info-list
+                                            li.title.short-title
+                                                a(href="/movie/#{item[2]._id}") #{item[2].title}
+                                            li: span #{item[2].summary}
+                                .yk-col4
+                                    .yk-pack.p-list.mb16
+                                        .p-thumb
+                                            a(href="/movie/#{item[3]._id}",title="#{item[3].title}",target="video")
+                                            i.bg
+                                            .p-thumb-taglt
+                                                span.ico-issole
+                                            img.quic(src="#{item[3].poster}")
+                                        ul.p-info.pos-bottom
+                                            li.status.hover-hide
+                                                span.p-time.hover-hide
+                                                    i.ibg
+                                                        span 更新至4集
+                                        ul.info-list
+                                            li.title.short-title
+                                                a(href="/movie/#{item[3]._id}") #{item[3].title}
+                                            li: span #{item[3].summary}
+                                    .yk-pack.p-list
+                                        .p-thumb
+                                            a(href="/movie/#{item[4]._id}",title="#{item[4].title}",target="video")
+                                            i.bg
+                                            .p-thumb-taglt
+                                                span.ico-issole
+                                            img.quic(src="#{item[4].poster}")
+                                        ul.p-info.pos-bottom
+                                            li.status.hover-hide
+                                                span.p-time.hover-hide
+                                                    i.ibg
+                                                        span 更新至4集
+                                        ul.info-list
+                                            li.title.short-title
+                                                a(href="/movie/#{item[4]._id}") #{item[4].title}
+                                            li: span #{item[4].summary}
+                                .yk-col4.colxx
+                                    .yk-pack.p-list.mb16
+                                        .p-thumb
+                                            a(href="/movie/#{item[5]._id}",title="#{item[5].title}",target="video")
+                                            i.bg
+                                            .p-thumb-taglt
+                                                span.ico-issole
+                                            img.quic(src="#{item[5].poster}")
+                                        ul.p-info.pos-bottom
+                                            li.status.hover-hide
+                                                span.p-time.hover-hide
+                                                    i.ibg
+                                                        span 更新至4集
+                                        ul.info-list
+                                            li.title.short-title
+                                                a(href="/movie/#{item[5]._id}") #{item[5].title}
+                                            li: span #{item[5].summary}
+                                    .yk-pack.p-list
+                                        .p-thumb
+                                            a(href="/movie/#{item[6]._id}",title="#{item[6].title}",target="video")
+                                            i.bg
+                                            .p-thumb-taglt
+                                                span.ico-issole
+                                            img.quic(src="#{item[6].poster}")
+                                        ul.p-info.pos-bottom
+                                            li.status.hover-hide
+                                                span.p-time.hover-hide
+                                                    i.ibg
+                                                        span 更新至4集
+                                        ul.info-list
+                                            li.title.short-title
+                                                a(href="/movie/#{item[6]._id}") #{item[6].title}
+                                            li: span #{item[6].summary}
+                                .yk-col4.colxx
+                                    .yk-pack.p-list.mb16
+                                        .p-thumb
+                                            a(href="/movie/#{item[7]._id}",title="#{item[7].title}",target="video")
+                                            i.bg
+                                            .p-thumb-taglt
+                                                span.ico-issole
+                                            img.quic(src="#{item[7].poster}")
+                                        ul.p-info.pos-bottom
+                                            li.status.hover-hide
+                                                span.p-time.hover-hide
+                                                    i.ibg
+                                                        span 更新至4集
+                                        ul.info-list
+                                            li.title.short-title
+                                                a(href="/movie/#{item[7]._id}") #{item[7].title}
+                                            li: span #{item[7].summary}
+                                    .yk-pack.p-list
+                                        .p-thumb
+                                            a(href="/movie/#{item[8]._id}",title="#{item[8].title}",target="video")
+                                            i.bg
+                                            .p-thumb-taglt
+                                                span.ico-issole
+                                            img.quic(src="#{item[8].poster}")
+                                        ul.p-info.pos-bottom
+                                            li.status.hover-hide
+                                                span.p-time.hover-hide
+                                                    i.ibg
+                                                        span 更新至4集
+                                        ul.info-list
+                                            li.title.short-title
+                                                a(href="/movie/#{item[8]._id}") #{item[8].title}
+                                            li: span #{item[8].summary}
+    div(id="movies",style="height:400px")
+        .mod.modSwitch.mod-new
+            .h
+                h2
+                    img.mod-icon.mod-fix(title="电视剧",src="http://r1.ykimg.com/051000005706326467BC3D382308E5E8")
+                    a(target="_blank",href="") 东秦
+                ul.t_tab
+                    li.current
+                        a(href="#",rel="1",hidefocus="true") 我的大学
+                    li
+                        a(href="#",rel="3",hidefocus="true") 微电影
+            .c(style="clear:both")
+                each item,i in movies
+                    if item.length >= 9
+                        .tab-c.hide(style="display:none")
+                            div
+                                .yk-row(modshow="1")
+                                    .yk-col8
+                                        .yk-pack.p-list.p-large(_showid="300647")
+                                            .p-thumb
+                                                a(href="/movie/#{item[0]._id}",title="#{item[0].title}",target="video")
+                                                i.bg
+                                                img.quic(src="#{item[0].poster}")
+                                            ul.p-info.pos-bottom
+                                                li.status.hover-hide
+                                                    span.p-time.hover-hide
+                                                        i.ibg
+                                                            span 更新至28级
+                                            ul.info-list
+                                                li.title.short-title
+                                                    a(href="/movie/#{item[0]._id}",title="#{item[0].title}",target="video") #{item[0].title}
+                                                li
+                                                    span #{item[0].summary}
+                                    .yk-col4
+                                        .yk-pack.p-list.mb16
+                                            .p-thumb
+                                                a(href="/movie/#{item[1]._id}",title="#{item[1].title}",target="video")
+                                                i.bg
+                                                .p-thumb-taglt
+                                                    span.ico-issole
+                                                img.quic(src="#{item[1].poster}")
+                                            ul.p-info.pos-bottom
+                                                li.status.hover-hide
+                                                    span.p-time.hover-hide
+                                                        i.ibg
+                                                            span 更新至4集
+                                            ul.info-list
+                                                li.title.short-title
+                                                    a(href="/movie/#{item[1]._id}") #{item[1].title}
+                                                li: span #{item[1].summary}
+                                        .yk-pack.p-list
+                                            .p-thumb
+                                                a(href="/movie/#{item[2]._id}",title="#{item[2].title}",target="video")
+                                                i.bg
+                                                .p-thumb-taglt
+                                                    span.ico-issole
+                                                img.quic(src="#{item[2].poster}")
+                                            ul.p-info.pos-bottom
+                                                li.status.hover-hide
+                                                    span.p-time.hover-hide
+                                                        i.ibg
+                                                            span 更新至4集
+                                            ul.info-list
+                                                li.title.short-title
+                                                    a(href="/movie/#{item[2]._id}") #{item[2].title}
+                                                li: span #{item[2].summary}
+                                    .yk-col4
+                                        .yk-pack.p-list.mb16
+                                            .p-thumb
+                                                a(href="/movie/#{item[3]._id}",title="#{item[3].title}",target="video")
+                                                i.bg
+                                                .p-thumb-taglt
+                                                    span.ico-issole
+                                                img.quic(src="#{item[3].poster}")
+                                            ul.p-info.pos-bottom
+                                                li.status.hover-hide
+                                                    span.p-time.hover-hide
+                                                        i.ibg
+                                                            span 更新至4集
+                                            ul.info-list
+                                                li.title.short-title
+                                                    a(href="/movie/#{item[3]._id}") #{item[3].title}
+                                                li: span #{item[3].summary}
+                                        .yk-pack.p-list
+                                            .p-thumb
+                                                a(href="/movie/#{item[4]._id}",title="#{item[4].title}",target="video")
+                                                i.bg
+                                                .p-thumb-taglt
+                                                    span.ico-issole
+                                                img.quic(src="#{item[4].poster}")
+                                            ul.p-info.pos-bottom
+                                                li.status.hover-hide
+                                                    span.p-time.hover-hide
+                                                        i.ibg
+                                                            span 更新至4集
+                                            ul.info-list
+                                                li.title.short-title
+                                                    a(href="/movie/#{item[4]._id}") #{item[4].title}
+                                                li: span #{item[4].summary}
+                                    .yk-col4.colxx
+                                        .yk-pack.p-list.mb16
+                                            .p-thumb
+                                                a(href="/movie/#{item[5]._id}",title="#{item[5].title}",target="video")
+                                                i.bg
+                                                .p-thumb-taglt
+                                                    span.ico-issole
+                                                img.quic(src="#{item[5].poster}")
+                                            ul.p-info.pos-bottom
+                                                li.status.hover-hide
+                                                    span.p-time.hover-hide
+                                                        i.ibg
+                                                            span 更新至4集
+                                            ul.info-list
+                                                li.title.short-title
+                                                    a(href="/movie/#{item[5]._id}") #{item[5].title}
+                                                li: span #{item[5].summary}
+                                        .yk-pack.p-list
+                                            .p-thumb
+                                                a(href="/movie/#{item[6]._id}",title="#{item[6].title}",target="video")
+                                                i.bg
+                                                .p-thumb-taglt
+                                                    span.ico-issole
+                                                img.quic(src="#{item[6].poster}")
+                                            ul.p-info.pos-bottom
+                                                li.status.hover-hide
+                                                    span.p-time.hover-hide
+                                                        i.ibg
+                                                            span 更新至4集
+                                            ul.info-list
+                                                li.title.short-title
+                                                    a(href="/movie/#{item[6]._id}") #{item[6].title}
+                                                li: span #{item[6].summary}
+                                    .yk-col4.colxx
+                                        .yk-pack.p-list.mb16
+                                            .p-thumb
+                                                a(href="/movie/#{item[7]._id}",title="#{item[7].title}",target="video")
+                                                i.bg
+                                                .p-thumb-taglt
+                                                    span.ico-issole
+                                                img.quic(src="#{item[7].poster}")
+                                            ul.p-info.pos-bottom
+                                                li.status.hover-hide
+                                                    span.p-time.hover-hide
+                                                        i.ibg
+                                                            span 更新至4集
+                                            ul.info-list
+                                                li.title.short-title
+                                                    a(href="/movie/#{item[7]._id}") #{item[7].title}
+                                                li: span #{item[7].summary}
+                                        .yk-pack.p-list
+                                            .p-thumb
+                                                a(href="/movie/#{item[8]._id}",title="#{item[8].title}",target="video")
+                                                i.bg
+                                                .p-thumb-taglt
+                                                    span.ico-issole
+                                                img.quic(src="#{item[8].poster}")
+                                            ul.p-info.pos-bottom
+                                                li.status.hover-hide
+                                                    span.p-time.hover-hide
+                                                        i.ibg
+                                                            span 更新至4集
+                                            ul.info-list
+                                                li.title.short-title
+                                                    a(href="/movie/#{item[8]._id}") #{item[8].title}
+                                                li: span #{item[8].summary}
+    script.
+        $(document).ready(function () {
+            function tabtexiao(fatherid){
+                //这里实现一个特效：鼠标划过哪个标签，就展现哪个标签的内容
+                //标签数组
+                var lis = $(" #"+fatherid+" .mod .h ul li");
+                var tabcs = $(" #"+fatherid+" .mod .c .tab-c");
+                $(tabcs[0]).show();//默认都是不显示的
+                //给每个标签添加划过事件
+                lis.each(function (item) {
+                    $(this).mouseover(function () {
+                        $(" #"+fatherid+" .mod .h ul li.current").removeClass("current");
+                        $(this).addClass("current");
+                        tabcs.each(function () {
+                            $(this).hide();
+                        });
+                        $(tabcs[item]).show();
+
+                    });
+                });
+
+            }
+            //分别给tvs movies　栏目添加特效
+            tabtexiao('tvs');
+            tabtexiao('movies');
+
+
+
+        });
